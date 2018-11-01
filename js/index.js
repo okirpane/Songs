@@ -101,7 +101,7 @@ var equalizer = EQUALIZER_CENTER_FREQUENCIES.map(function (frequency) {
   return filter;
 });
 var echo = new Tone.FeedbackDelay('16n', 0.5);
-var delay = Tone.context.createDelay((Math.random()*8));
+var delay = Tone.context.createDelay(6.0);
 var delayFade = Tone.context.createGain();
 
 delay.delayTime.value = 6.0;
