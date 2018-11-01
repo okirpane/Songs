@@ -1,3 +1,26 @@
+var angle = 0;
+
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  diameter = height - 10;
+  noStroke();
+  fill(0, 204, 255);
+}
+
+function draw() {
+  background(0);
+
+  var d1 = 10 + sin(angle) * diameter / 2 + diameter / 2;
+  var d2 = 10 + sin(angle + PI / 2) * diameter / 2 + diameter / 2;
+  var d3 = 10 + sin(angle + PI) * diameter / 2 + diameter / 2;
+
+  ellipse(0, height / 2, d1, d1);
+  ellipse(width / 2, height / 2, d2, d2);
+  ellipse(width, height / 2, d3, d3);
+
+  angle += 0.005;
+}
+
 var _slicedToArray = function () {function sliceIterator(arr, i) {var _arr = [];var _n = true;var _d = false;var _e = undefined;try {for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {_arr.push(_s.value);if (i && _arr.length === i) break;}} catch (err) {_d = true;_e = err;} finally {try {if (!_n && _i["return"]) _i["return"]();} finally {if (_d) throw _e;}}return _arr;}return function (arr, i) {if (Array.isArray(arr)) {return arr;} else if (Symbol.iterator in Object(arr)) {return sliceIterator(arr, i);} else {throw new TypeError("Invalid attempt to destructure non-iterable instance");}};}();var EQUALIZER_CENTER_FREQUENCIES = [
 100, 125, 160, 200, 250, 315, 400, 500, 630, 800, 1000, 1250,
 1600, 2000, 2500, 3150, 4000, 5000, 6300, 8000, 10000];
