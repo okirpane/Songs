@@ -132,14 +132,14 @@ new Tone.Loop(function (time) {
 
   leftSynth.triggerAttackRelease('A2', '1:1:1', '+11:2');
 
-  //leftSynth.triggerAttackRelease('A4', '1:1:1', '+19:0');
-  //leftSynth.setNote('G4', '+19:1:2');
-  //leftSynth.setNote('G4', '+19:3:0');
-  //leftSynth.setNote('E4', '+19:4:2');
   leftSynth.triggerAttackRelease('A4', '1:1:1', '+19:0');
   leftSynth.setNote('G4', '+19:1:2');
   leftSynth.setNote('G4', '+19:3:0');
-  leftSynth.setNote('A4', '+19:4:2');
+  leftSynth.setNote('E4', '+19:4:2');
+  leftSynth.triggerAttackRelease('A4', '1:1:1', '+19:0');
+  leftSynth.setNote('G4', '+20:1:2');
+  leftSynth.setNote('G4', '+20:3:0');
+  leftSynth.setNote('A4', '+20:4:2');
 }, '34m').start();
 
 new Tone.Loop(function (time) {
